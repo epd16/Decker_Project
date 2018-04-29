@@ -1,14 +1,17 @@
 package it472.usna.edu.decker_project;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+
+//import javax.naming.Context;
 
 /**
  * Created by m181446 on 4/28/2018.
  */
 
-public class Contact {
+public class Contact implements Serializable {
 
     // private class variables
     private String firstName;
@@ -16,6 +19,13 @@ public class Contact {
     private String phoneNumber;
     private int lateness;
     private Map <String, String> events = new HashMap<>();
+
+    public Contact(String fName, String lName, String pNumber) {
+        firstName = fName;
+        lastName = lName;
+        phoneNumber = pNumber;
+        lateness = 0;
+    }
 
     /*
     Method to set firstName to a given name
@@ -67,5 +77,14 @@ public class Contact {
      */
     public int getLateness() {
         return lateness;
+    }
+
+    /*
+    Method overriding toString()
+    Returns the first and last name of the contact
+     */
+    @Override
+    public String toString() {
+       return firstName + " " + lastName;
     }
 }
