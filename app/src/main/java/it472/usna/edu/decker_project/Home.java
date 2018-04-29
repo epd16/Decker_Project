@@ -66,6 +66,9 @@ public class Home extends AppCompatActivity {
      */
     public void createEvent(View v) {
         Intent intent = new Intent(Home.this, CreateEvent1.class);
+        Bundle homeBundle = new Bundle();
+        homeBundle.putSerializable("contacts", (Serializable)listContacts);
+        intent.putExtras(homeBundle);
         Home.this.startActivity(intent);
     }
 

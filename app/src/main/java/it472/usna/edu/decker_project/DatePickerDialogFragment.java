@@ -35,7 +35,7 @@ public class DatePickerDialogFragment extends DialogFragment implements DatePick
         // and is called twice if ‘Done’ is selected.  This is a known issue!
 
         Log.d("IT472", "Date Selected: " + (monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
-        String date = Integer.toString(monthOfYear+1) + "-" + Integer.toString(dayOfMonth) + "-" + Integer.toString(year);
+        String date = String.format("%02d",monthOfYear+1) + "-" + String.format("%02d", dayOfMonth) + "-" + Integer.toString(year);
         ((CreateEvent1) getActivity()).setDate(date);
     }
 }

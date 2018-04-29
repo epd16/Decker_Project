@@ -32,7 +32,8 @@ public class TimePickerDialogFragment extends DialogFragment implements TimePick
         //The method onTimeSet is called once even if the back key is pressed,
         // and is called twice if ‘Done’ is selected.  This is a known issue!
         Log.d("IT472", "Time Selected: " + hourOfDay + ":" + minute);
-        String time = Integer.toString(hourOfDay) + ":" + Integer.toString(minute);
+        String time = String.format("%02d", hourOfDay) + ":" + String.format("%02d", minute);
+        //String time = hourOfDay + ":" + minute;
         ((CreateEvent1) getActivity()).setTime(time);
     }
 }

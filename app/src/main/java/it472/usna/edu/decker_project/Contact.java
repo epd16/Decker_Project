@@ -16,6 +16,7 @@ public class Contact implements Serializable {
     private String lastName;
     private String phoneNumber;
     private int lateness;
+    private boolean attending;
     private Map <String, String> events = new HashMap<>();
 
     public Contact(String fName, String lName, String pNumber) {
@@ -23,6 +24,7 @@ public class Contact implements Serializable {
         lastName = lName;
         phoneNumber = pNumber;
         lateness = 0;
+        attending = false;
     }
 
     /*
@@ -84,5 +86,29 @@ public class Contact implements Serializable {
     @Override
     public String toString() {
        return firstName + " " + lastName;
+    }
+
+    /*
+    Method to toggle attendance for a specific event
+     */
+    public void toggleAttendance() {
+        if(attending) { attending = false; }
+        else { attending = true; }
+    }
+
+    /*
+    Method to query attendance, returns a string
+     */
+    public String queryAttendance() {
+        if(attending) { return firstName + " is attending"; }
+        else { return firstName + " is not attending"; }
+    }
+
+    /*
+    Method to check attendance, returns a boolean
+    */
+    public boolean getAttendance() {
+        if(attending) { return true; }
+        else { return false; }
     }
 }

@@ -74,7 +74,6 @@ public class ViewContacts1 extends AppCompatActivity {
             }
         });
 
-
     }
 
     /*
@@ -118,8 +117,8 @@ public class ViewContacts1 extends AppCompatActivity {
     }
 
     /*
-Void method to save the list to a file
-*/
+    Void method to save the list to a file
+    */
     public void saveList() {
         try {
             FileOutputStream fos = openFileOutput(contactFileName, Context.MODE_PRIVATE);

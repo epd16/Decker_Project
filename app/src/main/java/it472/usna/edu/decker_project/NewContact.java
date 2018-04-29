@@ -1,12 +1,18 @@
 package it472.usna.edu.decker_project;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -19,6 +25,7 @@ public class NewContact extends AppCompatActivity {
     EditText fName;
     EditText lName;
     EditText phoneNumber;
+    private String contactFileName = "contacts";
 
     ArrayList<Contact> listContacts = new ArrayList<>();
 
@@ -49,10 +56,33 @@ public class NewContact extends AppCompatActivity {
         Contact newContact = new Contact(fName.getText().toString(), lName.getText().toString(), phoneNumber.getText().toString());
         listContacts.add(newContact);
 
+        //save the list
+        saveList();
+
         // Bundle it and send it
         Bundle extras = new Bundle();
         extras.putSerializable("contacts", (Serializable)listContacts);
         intent.putExtras(extras);
         NewContact.this.startActivity(intent);
+    }
+
+    /*
+    Void method to save the list to a file
+    */
+    public void saveList() {
+        try {
+            FileOutputStream fos = openFileOutput(contactFileName, Context.MODE_PRIVATE);
+            ObjectOutputStream oos = new ObjectOutputStream((fos));
+            oos.writeObject(listContacts);
+            oos.close();
+
+        } catch (FileNotFoundException e) {
+            Log.e("IT472", "saveObjectToFile FileNotFoundException: " + e.getMessage());
+        } catch (IOException e) {
+            Log.e("IT472", "saveObjectToFile IOException: " + e.getMessage());
+        } catch (Exception e) {
+            Log.e("IT472", "saveObjectToFile Exception:  " + e.getMessage());
+        }
+
     }
 }
