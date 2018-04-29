@@ -23,7 +23,8 @@
         <activity android:name=".CreateEvent2" />
         <activity android:name=".CreateEvent3" />
         <activity android:name=".ViewEvents2" />
-        <activity android:name=".ViewContacts2"></activity>
+        <activity android:name=".ViewContacts2" />
+        <activity android:name=".NewContact"></activity>
     </application>
 
 </manifest>

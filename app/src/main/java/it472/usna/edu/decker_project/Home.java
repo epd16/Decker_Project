@@ -25,7 +25,7 @@ public class Home extends AppCompatActivity {
     /*
     Class Variables
      */
-    private String fileName = "contacts";
+    private String contactFileName = "contacts";
     private ArrayList<Contact> listContacts = new ArrayList<>();
 
     @Override
@@ -42,11 +42,18 @@ public class Home extends AppCompatActivity {
         TextView dateText = (TextView) findViewById(R.id.home_2);
         dateText.setText(dateString);
 
+        Log.i("Friend Sked", "Made it");
+
         // load the contacts
         loadList();
 
-        Contact ted = new Contact("ted", "decker", "3123404300");
-        listContacts.add(ted);
+        //Contact ted = new Contact("ted", "decker", "3123404300");
+        //listContacts.add(ted);
+
+        Log.i("IT472", listContacts.toString());
+
+        //saveList();
+
     }
 
 
@@ -90,7 +97,7 @@ public class Home extends AppCompatActivity {
     */
     public void loadList() {
         try {
-            FileInputStream fis = openFileInput(fileName);
+            FileInputStream fis = openFileInput(contactFileName);
             ObjectInputStream ois = new ObjectInputStream(fis);
 
             Object object = ois.readObject();
@@ -114,7 +121,7 @@ public class Home extends AppCompatActivity {
     */
     public void saveList() {
         try {
-            FileOutputStream fos = openFileOutput(fileName, Context.MODE_PRIVATE);
+            FileOutputStream fos = openFileOutput(contactFileName, Context.MODE_PRIVATE);
             ObjectOutputStream oos = new ObjectOutputStream((fos));
             oos.writeObject(listContacts);
             oos.close();

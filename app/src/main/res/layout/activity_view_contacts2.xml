@@ -9,7 +9,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/view_2_1"
+        android:id="@+id/viewC_2_1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.12"
@@ -21,8 +21,9 @@
         android:textSize="40sp"
         android:gravity="center"/>
 
+
     <TextView
-        android:id="@+id/view_2_2"
+        android:id="@+id/viewC_2_2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.12"
@@ -30,10 +31,23 @@
         android:textStyle="bold"
         android:text=" Name: "
         android:textColor="@color/gold"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        android:gravity="bottom"/>
 
     <TextView
-        android:id="@+id/view_2_3"
+        android:id="@+id/viewC_2_3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.12"
+        android:fontFamily="@font/prox_nova_thin"
+        android:textStyle="bold"
+        android:text=" "
+        android:textColor="@color/lightBlue"
+        android:textSize="25sp"
+        android:gravity="top"/>
+
+    <TextView
+        android:id="@+id/viewC_2_4"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.12"
@@ -41,10 +55,22 @@
         android:textStyle="bold"
         android:text=" Phone Number: "
         android:textColor="@color/gold"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        android:gravity="bottom"/>
 
     <TextView
-        android:id="@+id/view_2_4"
+        android:id="@+id/viewC_2_5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.12"
+        android:fontFamily="@font/prox_nova_thin"
+        android:textStyle="bold"
+        android:textColor="@color/lightBlue"
+        android:textSize="25sp"
+        android:gravity="top"/>
+
+    <TextView
+        android:id="@+id/viewC_2_6"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.12"
@@ -52,13 +78,25 @@
         android:textStyle="bold"
         android:text=" Average Minutes Late: "
         android:textColor="@color/gold"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        android:gravity="bottom"/>
+
+    <TextView
+        android:id="@+id/viewC_2_7"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.12"
+        android:fontFamily="@font/prox_nova_thin"
+        android:textStyle="bold"
+        android:textColor="@color/lightBlue"
+        android:textSize="25sp"
+        android:gravity="top"/>
 
     <Button
         android:id="@+id/button_back"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.06"
+        android:layout_weight="0.10"
         android:fontFamily="@font/prox_nova_thin"
         android:textStyle="bold"
         android:text="Back"
