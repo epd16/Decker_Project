@@ -5,26 +5,22 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
-public class Splash extends AppCompatActivity {
+public class CreateEvent2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.activity_create_event2);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
     }
 
     /*
-    Method to navigate to the home screen
+    Method to navigate to the next screen to create an event
     */
-    public void enter(View v) {
-        Intent intent = new Intent(Splash.this, Home.class);
-        Splash.this.startActivity(intent);
+    public void next(View v) {
+        Intent intent = new Intent(CreateEvent2.this, CreateEvent3.class);
+        CreateEvent2.this.startActivity(intent);
     }
-
 }

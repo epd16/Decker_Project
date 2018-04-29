@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Splash"
+    android:background="@color/blue"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/welcome-2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.12"
+        android:fontFamily="@font/prox_nova_thin"
+        android:textStyle="bold"
+        android:text="Event Details"
+        android:textAlignment="center"
+        android:textColor="@color/lightBlue"
+        android:textSize="40sp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/create_1_1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.12"
+        android:fontFamily="@font/prox_nova_thin"
+        android:textStyle="bold"
+        android:text=" Event Name"
+        android:textColor="@color/gold"
+        android:textSize="25sp"
+        android:gravity="bottom"/>
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/create_e_1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.12"
+        android:fontFamily="@font/prox_nova_thin"
+        android:textStyle="bold"
+        android:hint="Enter a name"
+        android:textCursorDrawable="@null"
+        android:textColor="@color/gold"
+        android:textSize="20sp"
+        android:gravity="bottom"
+        app:backgroundTint="@color/white"/>
+
+    <TextView
+        android:id="@+id/create_1_2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.12"
+        android:fontFamily="@font/prox_nova_thin"
+        android:textStyle="bold"
+        android:text=" Event Date"
+        android:textColor="@color/gold"
+        android:textSize="25sp"
+        android:gravity="bottom"/>
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/create_e_2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.12"
+        android:fontFamily="@font/prox_nova_thin"
+        android:textStyle="bold"
+        android:hint="MM DD YYY"
+        android:textCursorDrawable="@null"
+        android:textColor="@color/gold"
+        android:textSize="20sp"
+        android:gravity="bottom"
+        app:backgroundTint="@color/white" />
+
+    <TextView
+        android:id="@+id/create_1_3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.12"
+        android:fontFamily="@font/prox_nova_thin"
+        android:textStyle="bold"
+        android:text=" Event Time"
+        android:textColor="@color/gold"
+        android:textSize="30sp"
+        android:gravity="bottom"/>
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/create_e_3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.12"
+        android:fontFamily="@font/prox_nova_thin"
+        android:textStyle="bold"
+        android:hint="HH MM"
+        android:textCursorDrawable="@null"
+        android:textColor="@color/gold"
+        android:textSize="20sp"
+        android:gravity="bottom"
+        app:backgroundTint="@color/white"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.02" />
+
+    <Button
+        android:id="@+id/buttonGuests"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.10"
+        android:fontFamily="@font/prox_nova_thin"
+        android:textStyle="bold"
+        android:text="Select Guests"
+        android:textSize="20sp"
+        android:textColor="@color/blue"
+        android:background="@drawable/button_menu"
+        android:layout_marginTop="0.5dp"
+        android:layout_marginBottom="0.5dp"
+        android:onClick="next"/>
+
+
+
+
+
+</LinearLayout>

@@ -16,7 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Home"></activity>
+        <activity android:name=".Home" />
+        <activity android:name=".CreateEvent1" />
+        <activity android:name=".ViewEvents1" />
+        <activity android:name=".ViewContacts1" />
+        <activity android:name=".CreateEvent2" />
+        <activity android:name=".CreateEvent3" />
+        <activity android:name=".ViewEvents2" />
+        <activity android:name=".ViewContacts2"></activity>
     </application>
 
 </manifest>
