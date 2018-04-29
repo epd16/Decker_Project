@@ -15,124 +15,89 @@
         android:layout_weight="0.12"
         android:fontFamily="@font/prox_nova_thin"
         android:textStyle="bold"
-        android:text="Event Details"
+        android:text="New Contact"
         android:textAlignment="center"
         android:textColor="@color/lightBlue"
         android:textSize="40sp"
         android:gravity="center"/>
 
     <TextView
-        android:id="@+id/create_e_1"
+        android:id="@+id/create_1_1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.12"
         android:fontFamily="@font/prox_nova_thin"
         android:textStyle="bold"
-        android:text=" Event Name:"
+        android:text=" First Name"
         android:textColor="@color/gold"
         android:textSize="25sp"
         android:gravity="bottom"/>
 
     <android.support.v7.widget.AppCompatEditText
-        android:id="@+id/create_e_2"
+        android:id="@+id/new_1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.12"
         android:fontFamily="@font/prox_nova_thin"
         android:textStyle="bold"
-        android:hint="Name"
+        android:hint="Enter a name"
         android:textCursorDrawable="@null"
         android:textColor="@color/gold"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:gravity="bottom"
         app:backgroundTint="@color/white"/>
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.10"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/create_e_3"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.7"
-            android:fontFamily="@font/prox_nova_thin"
-            android:textStyle="bold"
-            android:text=" Event Date:"
-            android:textColor="@color/gold"
-            android:textSize="25sp"
-            android:gravity="left|center"/>
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.3"
-            android:background="@drawable/button_menu"
-            android:textColor="@color/blue"
-            android:layout_margin="7dp"
-            android:text="Select Date"
-            android:onClick="selectDate"/>
-
-    </LinearLayout>
-
-
-
     <TextView
-        android:id="@+id/create_e_4"
+        android:id="@+id/create_1_2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.12"
         android:fontFamily="@font/prox_nova_thin"
         android:textStyle="bold"
-        android:textCursorDrawable="@null"
+        android:text=" Last Name"
         android:textColor="@color/gold"
-        android:textSize="35sp"
-        android:gravity="center|left"/>
+        android:textSize="25sp"
+        android:gravity="bottom"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.10"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/create_e_5"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.7"
-            android:fontFamily="@font/prox_nova_thin"
-            android:textStyle="bold"
-            android:text=" Event Time:"
-            android:textColor="@color/gold"
-            android:textSize="25sp"
-            android:gravity="left|center"/>
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.3"
-            android:background="@drawable/button_menu"
-            android:textColor="@color/blue"
-            android:layout_margin="7dp"
-            android:text="Select Time"
-            android:onClick="selectTime"/>
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/create_e_6"
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/new_2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.12"
         android:fontFamily="@font/prox_nova_thin"
         android:textStyle="bold"
+        android:hint="MM DD YYY"
         android:textCursorDrawable="@null"
         android:textColor="@color/gold"
-        android:textSize="35sp"
-        android:gravity="center|left"/>
+        android:textSize="20sp"
+        android:gravity="bottom"
+        app:backgroundTint="@color/white" />
+
+    <TextView
+        android:id="@+id/create_1_3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.12"
+        android:fontFamily="@font/prox_nova_thin"
+        android:textStyle="bold"
+        android:text=" Phone Number"
+        android:textColor="@color/gold"
+        android:textSize="25sp"
+        android:gravity="bottom"/>
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/new_3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.12"
+        android:fontFamily="@font/prox_nova_thin"
+        android:textStyle="bold"
+        android:hint="3125550000"
+        android:textCursorDrawable="@null"
+        android:textColor="@color/gold"
+        android:textSize="20sp"
+        android:gravity="bottom"
+        app:backgroundTint="@color/white"/>
 
     <View
         android:layout_width="match_parent"
@@ -146,12 +111,16 @@
         android:layout_weight="0.10"
         android:fontFamily="@font/prox_nova_thin"
         android:textStyle="bold"
-        android:text="Select Guests"
+        android:text="Create"
         android:textSize="20sp"
         android:textColor="@color/blue"
         android:background="@drawable/button_menu"
         android:layout_marginTop="0.5dp"
         android:layout_marginBottom="0.5dp"
-        android:onClick="next"/>
+        android:onClick="create"/>
+
+
+
+
 
 </LinearLayout>
