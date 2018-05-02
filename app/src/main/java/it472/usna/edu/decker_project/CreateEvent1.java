@@ -20,18 +20,23 @@ import java.util.Date;
 public class CreateEvent1 extends AppCompatActivity {
 
     /*
-    Class Variable
+    Class Variables
      */
+
+    // TextViews
     private EditText nameET;
     private TextView dateTV;
     private TextView timeTV;
+
+    // Date and time vars
     private SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd-yyyy HH:mm");
     private Date date;
-    private ArrayList<Contact> listContacts = new ArrayList<>();
-
-    // temp use variables
     private String tempDate;
     private String tempTime;
+
+    // Contact and Event Lists
+    private ArrayList<Contact> listContacts = new ArrayList<>();
+    private ArrayList<Event> listEvents = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +49,7 @@ public class CreateEvent1 extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
         listContacts = (ArrayList<Contact>) extras.getSerializable("contacts");
+        listEvents =  (ArrayList<Event>) extras.getSerializable("events");
 
         // Set edit and text fields
         nameET = findViewById(R.id.create_e_2);
@@ -66,6 +72,7 @@ public class CreateEvent1 extends AppCompatActivity {
         extras.putSerializable("contacts", (Serializable)listContacts);
         extras.putString("name", nameET.getText().toString());
         extras.putSerializable("date", (Serializable)date);
+        extras.putSerializable("events", (Serializable)listEvents);
 
         intent.putExtras(extras);
         CreateEvent1.this.startActivity(intent);

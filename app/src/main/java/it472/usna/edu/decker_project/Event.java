@@ -16,14 +16,18 @@ public class Event implements Serializable {
     Class Variables
      */
     private String eventName;
-    private Date eventDate;
+    private java.util.Date eventDate;
     private ArrayList<Contact> eventGuests =new ArrayList<>();
 
-    public Event(String name, Date date, ArrayList<Contact> guests) {
+    public Event(String name, java.util.Date date, ArrayList<Contact> guests) {
         eventName = name;
         eventDate = date;
         eventGuests = guests;
     }
 
+    @Override
+    public String toString() {
+        return eventName + " at " + eventDate.toString() + " with " + eventGuests.toString();
+    }
 
 }

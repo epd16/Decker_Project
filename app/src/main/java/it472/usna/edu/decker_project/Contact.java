@@ -6,7 +6,7 @@ import java.util.Map;
 
 
 /**
- * Created by m181446 on 4/28/2018.
+ * Contact class used for the contact list
  */
 
 public class Contact implements Serializable {
@@ -17,7 +17,6 @@ public class Contact implements Serializable {
     private String phoneNumber;
     private int lateness;
     private boolean attending;
-    private Map <String, String> events = new HashMap<>();
 
     public Contact(String fName, String lName, String pNumber) {
         firstName = fName;
@@ -77,6 +76,13 @@ public class Contact implements Serializable {
      */
     public int getLateness() {
         return lateness;
+    }
+
+    /*
+    Method to get lateness value
+    */
+    public void setLateness(int newLateness) {
+        lateness = newLateness;
     }
 
     /*

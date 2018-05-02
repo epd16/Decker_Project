@@ -21,16 +21,21 @@ public class CreateEvent2 extends AppCompatActivity {
     /*
     Class Variables
      */
+
+    // Lists of Contacts and Events
     private ArrayList<Contact> listContacts = new ArrayList<>();
     private ArrayList<String> listNames = new ArrayList<>();
+    private ArrayList<Contact> listGuests = new ArrayList<>();
+    private ArrayList<Event> listEvents = new ArrayList<>();
+
+    // ListView vars
     private ListView contactsListView;
     private ArrayAdapter contactsListAdapter;
-    private ArrayList<Contact> listGuests = new ArrayList<>();
-    private Toast toast;
 
-    // temp use variables
+    // Temp use variables
     private String name;
     private Date date;
+    private Toast toast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +48,7 @@ public class CreateEvent2 extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
         listContacts = (ArrayList<Contact>) extras.getSerializable("contacts");
+        listEvents =  (ArrayList<Event>) extras.getSerializable("events");
         name = extras.getString("name");
         date = (Date) extras.getSerializable("date");
 
@@ -74,6 +80,9 @@ public class CreateEvent2 extends AppCompatActivity {
         // generate the list of attendees
         gatherNames();
 
+        // Debugging
+        Log.i("IT472", listEvents.toString());
+
         // declare the intent
         Intent intent = new Intent(CreateEvent2.this, CreateEvent3.class);
 
@@ -81,6 +90,7 @@ public class CreateEvent2 extends AppCompatActivity {
         Bundle extras = new Bundle();
         extras.putSerializable("contacts", (Serializable)listContacts);
         extras.putSerializable("guests", (Serializable)listGuests);
+        extras.putSerializable("events", (Serializable)listEvents);
         extras.putSerializable("date", (Serializable)date);
         extras.putString("name", name);
         intent.putExtras(extras);

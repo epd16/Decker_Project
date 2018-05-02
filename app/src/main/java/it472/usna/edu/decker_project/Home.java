@@ -16,17 +16,26 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class Home extends AppCompatActivity {
 
     /*
     Class Variables
      */
+
+    // Pertaining to the contact list
     private String contactFileName = "contacts";
     private ArrayList<Contact> listContacts = new ArrayList<>();
+
+    // Pertaining to the event list
+    private String eventFileName = "events";
+    private ArrayList<Event> listEvents = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,18 +51,34 @@ public class Home extends AppCompatActivity {
         TextView dateText = (TextView) findViewById(R.id.home_2);
         dateText.setText(dateString);
 
-        Log.i("Friend Sked", "Made it");
+        //Date date = new GregorianCalendar(2014, Calendar.FEBRUARY, 11).getTime();
+       // Event temp = new Event("Temp-1", date, listContacts);
+        //listEvents.add(temp);
+        //saveEventList();
+
+
 
         // load the contacts
-        loadList();
+        loadContactList();
+        Log.i("IT472", "HOME: CONTACTS ARE: " + listContacts.toString());
 
-        //Contact ted = new Contact("ted", "decker", "3123404300");
-        //listContacts.add(ted);
+        // load the events
+        loadEventList();
+        Log.i("IT472", "HOME: EVENTS ARE: " + listEvents.toString());
 
-        Log.i("IT472", listContacts.toString());
+        listContacts.get(0).setLateness(5);
+        listContacts.get(0).setPhoneNumber("5556");
 
-        //saveList();
+        // UNCOMMENT TO WIPE THE CONTACT LIST
+        // listContacts.clear();
+        // saveContactList();
 
+        // UNCOMMENT TO WIPE THE CONTACT LIST
+        // listEvents.clear();
+        // saveEventList();
+
+        // Debug log message
+        //Log.i("IT472", listContacts.toString());
     }
 
 
@@ -68,6 +93,7 @@ public class Home extends AppCompatActivity {
         Intent intent = new Intent(Home.this, CreateEvent1.class);
         Bundle homeBundle = new Bundle();
         homeBundle.putSerializable("contacts", (Serializable)listContacts);
+        homeBundle.putSerializable("events", (Serializable)listEvents);
         intent.putExtras(homeBundle);
         Home.this.startActivity(intent);
     }
@@ -96,9 +122,9 @@ public class Home extends AppCompatActivity {
     // **********************
 
     /*
-    Void method to load the to-do list
+    Void method to load the contact list
     */
-    public void loadList() {
+    public void loadContactList() {
         try {
             FileInputStream fis = openFileInput(contactFileName);
             ObjectInputStream ois = new ObjectInputStream(fis);
@@ -109,7 +135,7 @@ public class Home extends AppCompatActivity {
 
         } catch (FileNotFoundException e) {
             Log.e("IT472", "getObjectFromFile FileNotFoundException: " + e.getMessage());
-            saveList();
+            saveContactList();
         } catch (IOException e) {
             Log.e("IT472", "getObjectFromFile IOException: " + e.getMessage());
         } catch (ClassNotFoundException e) {
@@ -120,13 +146,58 @@ public class Home extends AppCompatActivity {
     }
 
     /*
-    Void method to save the list to a file
+    Void method to save the contact list to a file
     */
-    public void saveList() {
+    public void saveContactList() {
         try {
             FileOutputStream fos = openFileOutput(contactFileName, Context.MODE_PRIVATE);
             ObjectOutputStream oos = new ObjectOutputStream((fos));
             oos.writeObject(listContacts);
+            oos.close();
+
+        } catch (FileNotFoundException e) {
+            Log.e("IT472", "saveObjectToFile FileNotFoundException: " + e.getMessage());
+        } catch (IOException e) {
+            Log.e("IT472", "saveObjectToFile IOException: " + e.getMessage());
+        } catch (Exception e) {
+            Log.e("IT472", "saveObjectToFile Exception:  " + e.getMessage());
+        }
+
+    }
+
+
+    /*
+    Void method to load the event list
+    */
+    public void loadEventList() {
+        try {
+            FileInputStream fis = openFileInput(eventFileName);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+
+            Object object = ois.readObject();
+            listEvents = (ArrayList) object;
+            ois.close();
+
+        } catch (FileNotFoundException e) {
+            Log.e("IT472", "getObjectFromFile FileNotFoundException: " + e.getMessage());
+            saveEventList();
+        } catch (IOException e) {
+            Log.e("IT472", "getObjectFromFile IOException: " + e.getMessage());
+        } catch (ClassNotFoundException e) {
+            Log.e("IT472", "getObjectFromFile ClassNotFoundException: " + e.getMessage());
+        } catch (Exception e) {// Catch exception if any
+            Log.e("IT472", "getObjectFromFile Exception: " + e.getMessage());
+        }
+    }
+
+    /*
+    Void method to save the event list to a file
+    */
+    public void saveEventList() {
+        try {
+            FileOutputStream fos = openFileOutput(eventFileName, Context.MODE_PRIVATE);
+            ObjectOutputStream oos = new ObjectOutputStream((fos));
+            oos.writeObject(listEvents);
             oos.close();
 
         } catch (FileNotFoundException e) {
