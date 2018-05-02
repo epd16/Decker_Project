@@ -21,6 +21,9 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+The first with a list view to view the contact list
+ */
 public class ViewContacts1 extends AppCompatActivity {
 
     /*
@@ -60,6 +63,7 @@ public class ViewContacts1 extends AppCompatActivity {
         // Save the List
         saveList();
 
+        // Sets the custom listener to open the contact when selected
         contactsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> a, View v, int position, long id) {

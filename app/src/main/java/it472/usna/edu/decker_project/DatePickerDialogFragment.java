@@ -13,8 +13,16 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 
+/*
+Date Picker dialog used from the IT472 course notes
+
+Used to pick a date for a given event
+ */
 public class DatePickerDialogFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener{
 
+    /*
+    Creates and sets up the dislog
+     */
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
 
@@ -28,6 +36,9 @@ public class DatePickerDialogFragment extends DialogFragment implements DatePick
         return dateDlg;
     }
 
+    /*
+    What to do when selected
+     */
     @Override
     public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
 

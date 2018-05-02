@@ -17,6 +17,9 @@ import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
+/*
+The second screen when viewing a contact. Contact details
+ */
 public class ViewContacts2 extends AppCompatActivity {
     /*
     Class variables
@@ -25,6 +28,7 @@ public class ViewContacts2 extends AppCompatActivity {
     ArrayList<Contact> listContacts = new ArrayList<>();
     String contactFileName = "contacts";
 
+    // Contact details
     TextView name;
     TextView phoneNumber;
     TextView attended;
@@ -46,6 +50,7 @@ public class ViewContacts2 extends AppCompatActivity {
 
         Log.i("IT472", contact.toString());
 
+        // populate the fields
         populateFields();
     }
 

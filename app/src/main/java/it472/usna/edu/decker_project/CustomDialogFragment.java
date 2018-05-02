@@ -12,6 +12,10 @@ import android.widget.EditText;
 
 /**
  * Created by m181446 on 5/2/2018.
+ *
+ * Used from IT472 Course Notes
+ *
+ * This dialog is used to update the lateness value of a contact
  */
 
 
@@ -19,6 +23,9 @@ public class CustomDialogFragment extends DialogFragment implements DialogInterf
 
     EditText inputET;
 
+    /*
+    Creates the dialog
+     */
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
 
@@ -37,6 +44,9 @@ public class CustomDialogFragment extends DialogFragment implements DialogInterf
         return builder.create();
     }
 
+    /*
+    Sets the onClick method for the dialog
+     */
     public void onClick(DialogInterface dialog, int itemId) {
 
         if (itemId == Dialog.BUTTON_POSITIVE) {

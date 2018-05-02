@@ -10,6 +10,10 @@ import android.widget.TimePicker;
 
 import java.util.Calendar;
 
+/*
+Time Picker dialog fragment used from the IT472 Course Notes
+Used to select a time for a given event.
+ */
 public class TimePickerDialogFragment extends DialogFragment implements TimePickerDialog.OnTimeSetListener {
 
     @Override

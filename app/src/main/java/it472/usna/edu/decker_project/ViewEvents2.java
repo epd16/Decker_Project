@@ -15,6 +15,10 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 
+/*
+The second screen when selecting an event to view. It has the event details.
+ */
+
 public class ViewEvents2 extends AppCompatActivity {
 
     /*

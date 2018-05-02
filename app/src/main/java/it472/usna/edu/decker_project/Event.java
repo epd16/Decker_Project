@@ -9,6 +9,8 @@ import java.util.Calendar;
 
 /**
  * Created by m181446 on 4/28/2018.
+ *
+ * Is a custom class for an event in the Friend Sked app
  */
 
 public class Event implements Serializable {

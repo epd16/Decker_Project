@@ -17,6 +17,9 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
+/*
+The first step in creating a new event. Set the event details.
+ */
 public class CreateEvent1 extends AppCompatActivity {
 
     /*
@@ -97,6 +100,8 @@ public class CreateEvent1 extends AppCompatActivity {
 
     /*
     Public method to set the date of the event
+
+    @String is the date to be set
      */
     public void setDate(String eventDate) {
         tempDate = eventDate;
@@ -105,6 +110,8 @@ public class CreateEvent1 extends AppCompatActivity {
 
     /*
     Public method to set the date of the event
+
+    @String is the time to be set
     */
     public void setTime(String eventTime) {
         tempTime = eventTime;
@@ -113,6 +120,9 @@ public class CreateEvent1 extends AppCompatActivity {
 
     /*
     Public method to condense date and time into one formatted item
+
+    @String is the temp date
+    @String is the temp time
      */
     public void condenseDT(String tDate, String tTime) {
         String tempDT = tDate + " " + tTime;

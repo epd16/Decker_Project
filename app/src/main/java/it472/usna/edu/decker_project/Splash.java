@@ -9,6 +9,10 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+/*
+A splash screen that could act as a login screen. Initiates when app is first opened
+ */
+
 public class Splash extends AppCompatActivity {
 
     @Override

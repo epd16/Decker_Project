@@ -8,7 +8,7 @@ import java.util.Map;
 
 
 /**
- * Contact class used for the contact list
+ * Contact class used for the contact list. Custom made.
  */
 
 public class Contact implements Serializable {

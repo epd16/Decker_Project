@@ -18,6 +18,10 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
+/*
+This acts as the final step in creating an event. It send the text messages and creates the event,
+while updating the list.
+ */
 public class CreateEvent3 extends AppCompatActivity {
 
     /*

@@ -18,6 +18,9 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+/*
+The first screen when viewing events. THis has a listview to select from.
+ */
 public class ViewEvents1 extends AppCompatActivity {
 
     /*

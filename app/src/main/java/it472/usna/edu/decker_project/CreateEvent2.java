@@ -16,6 +16,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.concurrent.CopyOnWriteArrayList;
 
+/*
+Intermediary step in creating a new event.
+Allows the user to select the guests from a list.
+ */
 public class CreateEvent2 extends AppCompatActivity {
 
     /*
@@ -117,6 +121,9 @@ public class CreateEvent2 extends AppCompatActivity {
         }
     }
 
+    /*
+    Runs through the list of contacts and checks for the boolean value to send them invites
+     */
     public void gatherNames() {
         for(int i = 0; i < listContacts.size(); i++) {
             if(listContacts.get(i).getAttendance()) {

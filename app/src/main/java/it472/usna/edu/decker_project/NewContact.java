@@ -17,6 +17,9 @@ import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
+/*
+Creates a new contact in the contact list
+ */
 public class NewContact extends AppCompatActivity {
 
     /*

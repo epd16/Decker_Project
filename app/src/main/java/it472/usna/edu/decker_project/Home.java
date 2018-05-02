@@ -23,6 +23,15 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
+/*
+This is the primary home control screen for Friend Sked
+
+From here the user has the option to:
+    Create a new event
+    View past events
+    View and maintain the contact list
+ */
+
 public class Home extends AppCompatActivity {
 
     /*
@@ -51,13 +60,6 @@ public class Home extends AppCompatActivity {
         TextView dateText = (TextView) findViewById(R.id.home_2);
         dateText.setText(dateString);
 
-        //Date date = new GregorianCalendar(2014, Calendar.FEBRUARY, 11).getTime();
-       // Event temp = new Event("Temp-1", date, listContacts);
-        //listEvents.add(temp);
-        //saveEventList();
-
-
-
         // load the contacts
         loadContactList();
         Log.i("IT472", "HOME: CONTACTS ARE: " + listContacts.toString());
@@ -65,9 +67,6 @@ public class Home extends AppCompatActivity {
         // load the events
         loadEventList();
         Log.i("IT472", "HOME: EVENTS ARE: " + listEvents.toString());
-
-        //listContacts.get(0).setLateness(5);
-        //listContacts.get(0).toggleAttendance();
 
         // UNCOMMENT TO WIPE THE CONTACT LIST
         //listContacts.clear();
