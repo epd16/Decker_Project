@@ -9,10 +9,10 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/create_3_1"
+        android:id="@+id/create_3_0"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.12"
+        android:layout_weight="0.10"
         android:fontFamily="@font/prox_nova_thin"
         android:textStyle="bold"
         android:text="Review Event"
@@ -21,67 +21,118 @@
         android:textSize="40sp"
         android:gravity="center"/>
 
-    <TextView
-        android:id="@+id/create_3_2"
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="0.15"
+    android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/create_3_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:fontFamily="@font/prox_nova_thin"
+            android:textStyle="bold"
+            android:text=" Name:"
+            android:textColor="@color/lightGold"
+            android:textSize="30sp"
+            android:gravity="left|top"/>
+        <TextView
+            android:id="@+id/create_3_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:fontFamily="@font/prox_nova_thin"
+            android:textStyle="bold"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/lightBlue"
+            android:textSize="30sp"
+            android:gravity="left|top"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.12"
-        android:fontFamily="@font/prox_nova_thin"
-        android:textStyle="bold"
-        android:text=" Name: "
-        android:textColor="@color/gold"
-        android:textSize="25sp" />
+        android:layout_weight="0.15"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/create_3_3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:fontFamily="@font/prox_nova_thin"
+            android:textStyle="bold"
+            android:text=" Date:"
+            android:textColor="@color/lightGold"
+            android:textSize="30sp"
+            android:gravity="left|top"/>
+        <TextView
+            android:id="@+id/create_3_4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:fontFamily="@font/prox_nova_thin"
+            android:textStyle="bold"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/lightBlue"
+            android:textSize="30sp"
+            android:gravity="left|top"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/create_3_5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:fontFamily="@font/prox_nova_thin"
+            android:textStyle="bold"
+            android:text="Guests:"
+            android:textColor="@color/lightGold"
+            android:textSize="30sp"
+            android:gravity="left|top"/>
+        <TextView
+            android:id="@+id/create_3_6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:fontFamily="@font/prox_nova_thin"
+            android:textStyle="bold"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/lightBlue"
+            android:textSize="30sp"
+            android:gravity="left|top"/>
+
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/create_3_3"
+        android:id="@+id/create_3_7"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.12"
+        android:layout_weight="0.05"
+        android:layout_margin="2dp"
         android:fontFamily="@font/prox_nova_thin"
         android:textStyle="bold"
-        android:text=" Date: "
-        android:textColor="@color/gold"
-        android:textSize="25sp" />
-
-    <TextView
-        android:id="@+id/create_3_4"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.12"
-        android:fontFamily="@font/prox_nova_thin"
-        android:textStyle="bold"
-        android:text=" Time: "
-        android:textColor="@color/gold"
-        android:textSize="25sp" />
-
-    <TextView
-        android:id="@+id/create_3_5"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.12"
-        android:fontFamily="@font/prox_nova_thin"
-        android:textStyle="bold"
-        android:text=" Guests: "
-        android:textColor="@color/gold"
-        android:textSize="25sp" />
-
-    <TextView
-        android:id="@+id/create_3_6"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.03"
-        android:fontFamily="@font/prox_nova_thin"
-        android:textStyle="bold"
-        android:text="Upon completion, invites will be sent to phone numbers of guests. A reminder will be set for 1 hr Prior to Event"
+        android:text="Press below to send event invitations. Time will be adjusted to each guest's average lateness value"
         android:textAlignment="center"
         android:textColor="@color/lightBlue"
-        android:textSize="10sp"
-        android:gravity="bottom"/>
+        android:textSize="12sp"
+        android:gravity="center"/>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.02"/>
 
     <Button
         android:id="@+id/buttonComplete"

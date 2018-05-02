@@ -3,6 +3,8 @@ package it472.usna.edu.decker_project;
 import java.io.Serializable;
 import java.sql.Date;
 import java.sql.Time;
+import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 
 /**
@@ -14,15 +16,13 @@ public class Event implements Serializable {
     Class Variables
      */
     private String eventName;
-    private Time eventTime;
     private Date eventDate;
-    private Calendar cal = Calendar.getInstance();
+    private ArrayList<Contact> eventGuests =new ArrayList<>();
 
-    public Event(String name, Time time, Date date) {
+    public Event(String name, Date date, ArrayList<Contact> guests) {
         eventName = name;
-        eventTime = time;
         eventDate = date;
-
+        eventGuests = guests;
     }
 
 
