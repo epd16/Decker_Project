@@ -119,7 +119,10 @@ public class CreateEvent2 extends AppCompatActivity {
 
     public void gatherNames() {
         for(int i = 0; i < listContacts.size(); i++) {
-            if(listContacts.get(i).getAttendance()) { listGuests.add(listContacts.get(i)); }
+            if(listContacts.get(i).getAttendance()) {
+                listGuests.add(listContacts.get(i));
+                listContacts.get(i).toggleAttendance();
+            }
         }
     }
 }

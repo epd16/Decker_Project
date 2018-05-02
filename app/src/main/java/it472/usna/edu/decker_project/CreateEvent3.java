@@ -135,7 +135,7 @@ public class CreateEvent3 extends AppCompatActivity {
             // Current Contact
             currentContact = listGuests.get(i);
 
-            // Increment the number of events for each contact for use of lateness calculation
+            // Increment the number of events for each contact
             listContacts.get(i).incEvents();
             Log.i("IT472", Integer.toString(listContacts.get(i).getEvents()));
 

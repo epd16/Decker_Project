@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,7 +12,7 @@
         android:id="@+id/welcome-1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.12"
+        android:layout_weight="0.05"
         android:fontFamily="@font/prox_nova_thin"
         android:textStyle="bold"
         android:text="Friend Sked"
@@ -24,7 +25,7 @@
         android:id="@+id/welcome-2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.12"
+        android:layout_weight="0.03"
         android:fontFamily="@font/prox_nova_thin"
         android:textStyle="bold"
         android:text="A Socal Scheduling App"
@@ -33,11 +34,24 @@
         android:textSize="25sp"
         android:gravity="top"/>
 
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.12"
+        android:layout_margin="20dp"
+        app:srcCompat="@drawable/splash" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.02" />
     <Button
         android:id="@+id/buttonEnter"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.03"
+        android:layout_weight="0.04"
         android:fontFamily="@font/prox_nova_thin"
         android:textStyle="bold"
         android:text="Enter"

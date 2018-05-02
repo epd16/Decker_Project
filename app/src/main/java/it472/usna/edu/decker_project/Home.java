@@ -67,7 +67,7 @@ public class Home extends AppCompatActivity {
         Log.i("IT472", "HOME: EVENTS ARE: " + listEvents.toString());
 
         //listContacts.get(0).setLateness(5);
-        //listContacts.get(0).setPhoneNumber("5556");
+        //listContacts.get(0).toggleAttendance();
 
         // UNCOMMENT TO WIPE THE CONTACT LIST
         //listContacts.clear();
