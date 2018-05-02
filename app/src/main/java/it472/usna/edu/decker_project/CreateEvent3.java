@@ -40,6 +40,7 @@ public class CreateEvent3 extends AppCompatActivity {
 
     // Misc
     String eventFileName = "events";
+    String contactsFileName = "contacts";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,11 +81,11 @@ public class CreateEvent3 extends AppCompatActivity {
         // Add it to the list
         listEvents.add(newEvent);
 
-        // Save the list
-        saveList();
-
         // Send the text messages
         sendInvites();
+
+        // Save the list
+        saveList();
 
         Intent intent = new Intent(CreateEvent3.this, Home.class);
         Bundle extras = new Bundle();
@@ -99,10 +100,15 @@ public class CreateEvent3 extends AppCompatActivity {
     */
     public void saveList() {
         try {
-            FileOutputStream fos = openFileOutput(eventFileName, Context.MODE_PRIVATE);
-            ObjectOutputStream oos = new ObjectOutputStream((fos));
-            oos.writeObject(listEvents);
-            oos.close();
+            FileOutputStream fos_1 = openFileOutput(eventFileName, Context.MODE_PRIVATE);
+            ObjectOutputStream oos_1 = new ObjectOutputStream((fos_1));
+            oos_1.writeObject(listEvents);
+            oos_1.close();
+
+            FileOutputStream fos_2 = openFileOutput(contactsFileName, Context.MODE_PRIVATE);
+            ObjectOutputStream oos_2 = new ObjectOutputStream((fos_2));
+            oos_2.writeObject(listContacts);
+            oos_2.close();
 
         } catch (FileNotFoundException e) {
             Log.e("IT472", "saveObjectToFile FileNotFoundException: " + e.getMessage());
@@ -128,6 +134,11 @@ public class CreateEvent3 extends AppCompatActivity {
         for(int i = 0; i < listGuests.size(); i++) {
             // Current Contact
             currentContact = listGuests.get(i);
+
+            // Increment the number of events for each contact for use of lateness calculation
+            listContacts.get(i).incEvents();
+            Log.i("IT472", Integer.toString(listContacts.get(i).getEvents()));
+
             // Fetch the adjusted time
             inviteDateTime = adjustedTime(currentContact);
             Log.i("IT472", "Sending to " + currentContact.getFirstName() + " " + inviteDateTime.toString());

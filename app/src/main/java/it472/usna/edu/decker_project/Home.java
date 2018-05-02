@@ -66,16 +66,16 @@ public class Home extends AppCompatActivity {
         loadEventList();
         Log.i("IT472", "HOME: EVENTS ARE: " + listEvents.toString());
 
-        listContacts.get(0).setLateness(5);
-        listContacts.get(0).setPhoneNumber("5556");
+        //listContacts.get(0).setLateness(5);
+        //listContacts.get(0).setPhoneNumber("5556");
 
         // UNCOMMENT TO WIPE THE CONTACT LIST
-        // listContacts.clear();
-        // saveContactList();
+        //listContacts.clear();
+        //saveContactList();
 
         // UNCOMMENT TO WIPE THE CONTACT LIST
-        // listEvents.clear();
-        // saveEventList();
+        //listEvents.clear();
+        //saveEventList();
 
         // Debug log message
         //Log.i("IT472", listContacts.toString());

@@ -27,11 +27,12 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.12"
+        android:layout_margin="5dp"
         android:fontFamily="@font/prox_nova_thin"
         android:textStyle="bold"
-        android:text=" Name: "
+        android:text="Name: "
         android:textColor="@color/gold"
-        android:textSize="25sp"
+        android:textSize="30sp"
         android:gravity="bottom"/>
 
     <TextView
@@ -39,6 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.12"
+        android:layout_margin="5dp"
         android:fontFamily="@font/prox_nova_thin"
         android:textStyle="bold"
         android:text=" "
@@ -47,22 +49,24 @@
         android:gravity="top"/>
 
     <TextView
-        android:id="@+id/viewC_2_4"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.12"
-        android:fontFamily="@font/prox_nova_thin"
-        android:textStyle="bold"
-        android:text=" Phone Number: "
-        android:textColor="@color/gold"
-        android:textSize="25sp"
-        android:gravity="bottom"/>
+    android:id="@+id/viewC_2_4"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="0.12"
+    android:layout_margin="5dp"
+    android:fontFamily="@font/prox_nova_thin"
+    android:textStyle="bold"
+    android:text="Phone Number: "
+    android:textColor="@color/gold"
+    android:textSize="30sp"
+    android:gravity="bottom"/>
 
     <TextView
         android:id="@+id/viewC_2_5"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.12"
+        android:layout_margin="5dp"
         android:fontFamily="@font/prox_nova_thin"
         android:textStyle="bold"
         android:textColor="@color/lightBlue"
@@ -74,11 +78,12 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.12"
+        android:layout_margin="5dp"
         android:fontFamily="@font/prox_nova_thin"
         android:textStyle="bold"
-        android:text=" Average Minutes Late: "
+        android:text="Events Attended:"
         android:textColor="@color/gold"
-        android:textSize="25sp"
+        android:textSize="30sp"
         android:gravity="bottom"/>
 
     <TextView
@@ -86,17 +91,44 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.12"
+        android:layout_margin="5dp"
         android:fontFamily="@font/prox_nova_thin"
         android:textStyle="bold"
         android:textColor="@color/lightBlue"
         android:textSize="25sp"
         android:gravity="top"/>
 
+    <TextView
+        android:id="@+id/viewC_2_8"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.12"
+        android:layout_margin="5dp"
+        android:fontFamily="@font/prox_nova_thin"
+        android:textStyle="bold"
+        android:text="Average Minutes Late: "
+        android:textColor="@color/gold"
+        android:textSize="30sp"
+        android:gravity="bottom"/>
+
+    <TextView
+        android:id="@+id/viewC_2_9"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.12"
+        android:layout_margin="5dp"
+        android:fontFamily="@font/prox_nova_thin"
+        android:textStyle="bold"
+        android:textColor="@color/lightBlue"
+        android:textSize="25sp"
+        android:gravity="top"
+        android:onClick="recalculate" />
+
     <Button
         android:id="@+id/button_back"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.10"
+        android:layout_weight="0.18"
         android:fontFamily="@font/prox_nova_thin"
         android:textStyle="bold"
         android:text="Back"

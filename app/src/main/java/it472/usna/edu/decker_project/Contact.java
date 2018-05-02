@@ -1,5 +1,7 @@
 package it472.usna.edu.decker_project;
 
+import android.util.Log;
+
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
@@ -16,6 +18,7 @@ public class Contact implements Serializable {
     private String lastName;
     private String phoneNumber;
     private int lateness;
+    private int events;
     private boolean attending;
 
     public Contact(String fName, String lName, String pNumber) {
@@ -23,6 +26,7 @@ public class Contact implements Serializable {
         lastName = lName;
         phoneNumber = pNumber;
         lateness = 0;
+        events = 0;
         attending = false;
     }
 
@@ -116,5 +120,29 @@ public class Contact implements Serializable {
     public boolean getAttendance() {
         if(attending) { return true; }
         else { return false; }
+    }
+
+    /*
+    Method to increment the number of events attended by the contact
+     */
+    public void incEvents() {
+        events += 1;
+    }
+
+    /*
+    Method to get the number of events attended
+     */
+    public int getEvents() {
+        Log.i("IT472", Integer.toString(events));
+        return events;
+    }
+
+    /*
+    Method to recalculate the lateness value given the number of events attended by the contact and
+    a recent data point
+     */
+    public void averageLateness(int val) {
+            val += lateness;
+            lateness = val / 2;
     }
 }
