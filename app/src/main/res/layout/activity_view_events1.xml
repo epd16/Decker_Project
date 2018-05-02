@@ -21,41 +21,6 @@
         android:textSize="40sp"
         android:gravity="center"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.06"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/view_events_2"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.04"
-            android:fontFamily="@font/prox_nova_thin"
-            android:textStyle="bold"
-            android:text="Gold Indicates Present"
-            android:textAlignment="center"
-            android:textColor="@color/lightGold"
-            android:textSize="15sp"
-            android:gravity="center"/>
-        <TextView
-            android:id="@+id/view_events_3"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.04"
-            android:fontFamily="@font/prox_nova_thin"
-            android:textStyle="bold"
-            android:text="Blue indicates past"
-            android:textAlignment="center"
-            android:textColor="@color/lightBlue"
-            android:textSize="15sp"
-            android:gravity="center"/>
-
-    </LinearLayout>
-
-
-
     <ListView
         android:id="@+id/events"
         android:layout_width="wrap_content"

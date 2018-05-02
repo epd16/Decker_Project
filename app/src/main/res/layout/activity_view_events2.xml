@@ -21,67 +21,110 @@
         android:textSize="40sp"
         android:gravity="center"/>
 
-    <TextView
-        android:id="@+id/view_2_2"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.12"
-        android:fontFamily="@font/prox_nova_thin"
-        android:textStyle="bold"
-        android:text=" Name: "
-        android:textColor="@color/gold"
-        android:textSize="25sp" />
+        android:layout_weight="0.15"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/view_2_3"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.12"
-        android:fontFamily="@font/prox_nova_thin"
-        android:textStyle="bold"
-        android:text=" Date: "
-        android:textColor="@color/gold"
-        android:textSize="25sp" />
+        <TextView
+            android:id="@+id/view_2_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:fontFamily="@font/prox_nova_thin"
+            android:textStyle="bold"
+            android:text=" Name:"
+            android:textColor="@color/lightGold"
+            android:textSize="30sp"
+            android:gravity="left|top"/>
+        <TextView
+            android:id="@+id/view_2_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:fontFamily="@font/prox_nova_thin"
+            android:textStyle="bold"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/lightBlue"
+            android:textSize="30sp"
+            android:gravity="left|top"/>
 
-    <TextView
-        android:id="@+id/view_2_4"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.12"
-        android:fontFamily="@font/prox_nova_thin"
-        android:textStyle="bold"
-        android:text=" Time: "
-        android:textColor="@color/gold"
-        android:textSize="25sp" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/view_2_5"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.12"
-        android:fontFamily="@font/prox_nova_thin"
-        android:textStyle="bold"
-        android:text=" Punctual Guests: "
-        android:textColor="@color/gold"
-        android:textSize="25sp" />
 
-    <TextView
-        android:id="@+id/view_2_6"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.12"
-        android:fontFamily="@font/prox_nova_thin"
-        android:textStyle="bold"
-        android:text=" Late Guests: "
-        android:textColor="@color/gold"
-        android:textSize="25sp" />
+        android:layout_weight="0.15"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/view_2_3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:fontFamily="@font/prox_nova_thin"
+            android:textStyle="bold"
+            android:text=" Date:"
+            android:textColor="@color/lightGold"
+            android:textSize="30sp"
+            android:gravity="left|top"/>
+        <TextView
+            android:id="@+id/view_2_4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:fontFamily="@font/prox_nova_thin"
+            android:textStyle="bold"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/lightBlue"
+            android:textSize="30sp"
+            android:gravity="left|top"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/view_2_5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:fontFamily="@font/prox_nova_thin"
+            android:textStyle="bold"
+            android:text="Guests:"
+            android:textColor="@color/lightGold"
+            android:textSize="30sp"
+            android:gravity="left|top"/>
+        <TextView
+            android:id="@+id/view_2_6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:fontFamily="@font/prox_nova_thin"
+            android:textStyle="bold"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/lightBlue"
+            android:textSize="30sp"
+            android:gravity="left|top"/>
+
+    </LinearLayout>
 
 
     <Button
         android:id="@+id/button_back"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.10"
+        android:layout_weight="0.08"
         android:fontFamily="@font/prox_nova_thin"
         android:textStyle="bold"
         android:text="Back"

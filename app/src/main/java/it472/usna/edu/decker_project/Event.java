@@ -25,6 +25,30 @@ public class Event implements Serializable {
         eventGuests = guests;
     }
 
+    /*
+    Public method to return the name of the event
+     */
+    public String getEventName() {
+        return eventName;
+    }
+
+    /*
+    Public method to return the time and date of the event
+    */
+    public String getEventDateTime() {
+        return eventDate.toString();
+    }
+
+    /*
+    Public method to return the time and date of the event
+    */
+    public String getEventGuests() {
+        return eventGuests.toString();
+    }
+
+    /*
+    Overrides method toString to return the name of the event and the time
+     */
     @Override
     public String toString() {
         return eventName + " at " + eventDate.toString() + " with " + eventGuests.toString();

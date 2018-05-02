@@ -103,6 +103,9 @@ public class Home extends AppCompatActivity {
      */
     public void viewEvents(View v) {
         Intent intent = new Intent(Home.this, ViewEvents1.class);
+        Bundle homeBundle = new Bundle();
+        homeBundle.putSerializable("events", (Serializable)listEvents);
+        intent.putExtras(homeBundle);
         Home.this.startActivity(intent);
     }
 

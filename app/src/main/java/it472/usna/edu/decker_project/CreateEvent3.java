@@ -57,13 +57,6 @@ public class CreateEvent3 extends AppCompatActivity {
         dateTime = (Date) extras.getSerializable("date");
         name = extras.getString("name");
 
-        // Debugging messages
-        Log.i("IT472", listContacts.toString());
-        Log.i("IT472", listGuests.toString());
-        Log.i("IT472", dateTime.toString());
-        Log.i("IT472", name);
-        Log.i("IT472", listEvents.toString());
-
         // Assign TVs
         nameTV = findViewById(R.id.create_3_2);
         dateTimeTV = findViewById(R.id.create_3_4);
@@ -140,7 +133,7 @@ public class CreateEvent3 extends AppCompatActivity {
             Log.i("IT472", "Sending to " + currentContact.getFirstName() + " " + inviteDateTime.toString());
 
             // Generate the text messages
-            message = "You're invited to the following Event: " + name + '\n' + "Time and Date: " + inviteDateTime;
+            message = "You're invited! \nEvent: " + name + '\n' + "Time & Date: " + inviteDateTime;
             Log.i("IT472", "To " + currentContact.getPhoneNumber() + " " + message);
             android.telephony.SmsManager sms = android.telephony.SmsManager.getDefault();
             sms.sendTextMessage(currentContact.getPhoneNumber(), null, message, null, null);
